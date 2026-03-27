@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" role="img" aria-label="Tunisian flag favicon">
+	<!-- Red background -->
+	<rect width="64" height="64" fill="#E70013" />
+	<!-- White disc -->
+	<circle cx="32" cy="32" r="18" fill="#fff" />
+	<!-- Crescent: draw by subtracting two circles visually using path -->
+	<path d="M41 32a9 9 0 1 1-17.95-3.1 6.5 6.5 0 1 0 11.9 2.6A9.02 9.02 0 0 1 41 32z" fill="#E70013"/>
+	<!-- Star: simple 5-point star centered -->
+	<g transform="translate(32,32) scale(0.9) rotate(-18)">
+		<path d="M0,-7.5 L1.9,-2.3 L7.3,-2.3 L2.7,1 L4.6,6.2 L0,3 L-4.6,6.2 L-2.7,1 L-7.3,-2.3 L-1.9,-2.3 Z" fill="#E70013"/>
+	</g>
+</svg>
