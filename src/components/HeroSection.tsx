@@ -6,7 +6,7 @@ const HeroSection = () => {
   const { t } = useLanguage();
 
   return (
-    <section id="home" className="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
+  <section id="home" className="relative h-screen min-h-[60vh] sm:min-h-[75vh] md:min-h-[600px] flex items-center justify-center overflow-hidden">
       <img
         src={heroImg}
         alt="Tunisia - Sidi Bou Said"
@@ -18,10 +18,10 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-primary/20" />
 
       <div className="relative z-10 text-center px-4 max-w-4xl mx-auto">
-        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold text-primary-foreground animate-fade-up leading-tight">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-display font-bold text-primary-foreground animate-fade-up leading-tight">
           {t("hero.title")}
         </h1>
-        <p className="mt-6 text-lg sm:text-xl md:text-2xl text-primary-foreground/90 animate-fade-up-delay-1 max-w-2xl mx-auto leading-relaxed">
+        <p className="mt-4 text-base sm:text-lg md:text-xl text-primary-foreground/90 animate-fade-up-delay-1 max-w-2xl mx-auto leading-relaxed">
           {t("hero.subtitle")}
         </p>
         <a

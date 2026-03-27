@@ -53,14 +53,14 @@ const GallerySection = () => {
         <h2 className="section-title text-center mb-4">{t("gallery.title")}</h2>
         <div className="w-20 h-1 bg-primary mx-auto mb-16 rounded-full" />
 
-        <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+        <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
           {images.map((img, i) => (
             <div
               key={i}
               className="break-inside-avoid cursor-pointer rounded-xl overflow-hidden card-hover"
               onClick={() => setLightbox(i)}
             >
-              <img src={img.src} alt={img.alt} className="w-full object-cover" loading="lazy" />
+              <img src={img.src} alt={img.alt} className="w-full h-48 sm:h-56 md:h-64 object-cover" loading="lazy" />
             </div>
           ))}
         </div>

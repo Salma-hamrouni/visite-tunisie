@@ -22,7 +22,7 @@ const IntroSection = () => {
           </div>
           <div className="relative">
             <div className="rounded-2xl overflow-hidden shadow-2xl">
-              <img src={sidiImg} alt="Sidi Bou Said" className="w-full h-[400px] object-cover" loading="lazy" width={800} height={1200} />
+              <img src={sidiImg} alt="Sidi Bou Said" className="w-full h-48 sm:h-64 md:h-[400px] object-cover" loading="lazy" width={800} height={1200} />
             </div>
             <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-primary/10 rounded-2xl -z-10" />
             <div className="absolute -top-6 -right-6 w-24 h-24 bg-accent/10 rounded-full -z-10" />

@@ -40,7 +40,7 @@ const Index = () => {
           </h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-16 rounded-full" />
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {quickLinks.map((link) => (
               <Link
                 key={link.to}
@@ -69,7 +69,7 @@ const Index = () => {
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="section-title mb-4">{t("gallery.title")}</h2>
           <div className="w-20 h-1 bg-primary mx-auto mb-12 rounded-full" />
-          <div className="grid grid-cols-3 gap-4 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 mb-10">
             {[carthageImg, sidiImg, soukImg].map((img, i) => (
               <div key={i} className="rounded-xl overflow-hidden h-48 md:h-64">
                 <img src={img} alt="" className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
