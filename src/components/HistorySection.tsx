@@ -138,12 +138,12 @@ const HistorySection = () => {
                 </div>
 
                   <div className="md:w-1/2 pl-0 md:pl-12">
-                  {item.img && (
-                    <div className="rounded-xl overflow-hidden shadow-lg card-hover">
-                      <img src={item.img} alt={t(item.titleKey)} className="w-full h-48 md:h-64 object-cover" loading="lazy" />
-                    </div>
-                  )}
-                </div>
+                    {item.img && (
+                      <div className="mx-auto w-full max-w-md md:max-w-full rounded-xl overflow-hidden shadow-lg card-hover mt-4 md:mt-0">
+                        <img src={item.img} alt={t(item.titleKey)} className="w-full h-48 md:h-64 object-cover" loading="lazy" />
+                      </div>
+                    )}
+                  </div>
               </div>
             ))}
           </div>
