@@ -128,7 +128,7 @@ const HistorySection = () => {
               <div key={item.titleKey} className={`relative flex flex-col md:flex-row items-start gap-8 ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
                 <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-primary border-4 border-background z-10 shadow-md shadow-primary/20" />
 
-                <div className={`md:w-1/2 ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"} pl-12 md:pl-0`}>
+                  <div className={`md:w-1/2 ${i % 2 === 0 ? "md:pr-12 md:text-right pl-0" : "md:pl-12 pl-0"}`}>
                   <span className="inline-block text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full mb-2">{item.year}</span>
                   <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mt-1">{t(item.titleKey)}</h3>
                   <p className="text-muted-foreground mt-3 leading-relaxed">{t(item.textKey)}</p>
@@ -137,7 +137,7 @@ const HistorySection = () => {
                   )}
                 </div>
 
-                <div className="md:w-1/2 pl-12 md:pl-0">
+                  <div className="md:w-1/2 pl-0 md:pl-12">
                   {item.img && (
                     <div className="rounded-xl overflow-hidden shadow-lg card-hover">
                       <img src={item.img} alt={t(item.titleKey)} className="w-full h-48 md:h-64 object-cover" loading="lazy" />

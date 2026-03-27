@@ -136,7 +136,7 @@ const FoodSection = () => {
           <h3 className="text-2xl font-display font-bold text-foreground mb-6 text-center">
             {lang === "fr" ? "🍽️ Conseils Gourmands" : lang === "ar" ? "🍽️ نصائح تذوقية" : "🍽️ Foodie Tips"}
           </h3>
-          <div className="grid md:grid-cols-3 gap-8 text-sm text-muted-foreground">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-sm text-muted-foreground">
             <div>
               <h4 className="font-semibold text-foreground mb-2">
                 {lang === "fr" ? "Marchés locaux" : lang === "ar" ? "الأسواق المحلية" : "Local Markets"}

@@ -111,8 +111,8 @@ const CultureSection = () => {
             : "A rich heritage blending Berber, Arab, and Mediterranean traditions"}
         </p>
 
-        {/* Main culture cards */}
-        <div className="grid md:grid-cols-3 gap-8 mb-20">
+  {/* Main culture cards */}
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
           {cultureItems.map((item) => (
             <div key={item.titleKey} className="group rounded-2xl overflow-hidden bg-card shadow-sm border border-border/50 card-hover">
               <div className="relative h-64 overflow-hidden">
@@ -136,7 +136,7 @@ const CultureSection = () => {
           {moreItems.map((item, i) => (
             <div
               key={item.title.en}
-              className={`grid md:grid-cols-2 gap-10 lg:gap-16 items-center ${i % 2 === 1 ? "md:direction-rtl" : ""}`}
+              className={`grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-16 items-center ${i % 2 === 1 ? "md:direction-rtl" : ""}`}
             >
               <div className={i % 2 === 1 ? "md:order-2" : ""}>
                 <div className="rounded-2xl overflow-hidden shadow-lg">
@@ -156,7 +156,7 @@ const CultureSection = () => {
           <h3 className="text-2xl font-display font-bold text-foreground mb-10 text-center">
             {lang === "fr" ? "Fêtes & Traditions" : lang === "ar" ? "الأعياد والتقاليد" : "Festivals & Traditions"}
           </h3>
-          <div className="grid sm:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             {traditions.map((t) => (
               <div key={t.title.en} className="bg-card rounded-xl p-6 border border-border/50 shadow-sm card-hover">
                 <div className="text-3xl mb-3">{t.emoji}</div>

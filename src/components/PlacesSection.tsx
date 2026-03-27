@@ -226,7 +226,7 @@ const PlacesSection = () => {
                 <p className="text-muted-foreground text-lg max-w-3xl">{cat.desc[lang]}</p>
               </div>
 
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {cat.places.map((place) => (
                   <div key={place.name.en} className="group rounded-2xl overflow-hidden bg-card shadow-sm border border-border/50 card-hover flex flex-col">
                     <div className="relative h-56 overflow-hidden">
@@ -265,7 +265,7 @@ const PlacesSection = () => {
           <h3 className="text-2xl font-display font-bold text-foreground mb-8 text-center">
             {lang === "fr" ? "🌟 Le saviez-vous ?" : lang === "ar" ? "🌟 هل تعلم؟" : "🌟 Did you know?"}
           </h3>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {[
               { num: "8", label: { fr: "Sites UNESCO", ar: "مواقع يونسكو", en: "UNESCO Sites" } },
               { num: "1300 km", label: { fr: "de côtes", ar: "من السواحل", en: "of coastline" } },

@@ -13,11 +13,41 @@
     --primary-foreground: 0 0% 100%;
   }
 
+  /* Box sizing reset to make spacing predictable */
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
   body {
     @apply bg-background text-foreground font-sans;
+    /* Prevent accidental horizontal scroll due to small negative offsets */
+    overflow-x: hidden;
   }
 
   h1, h2, h3, h4 {
     @apply font-display;
+  }
+}
+
+@layer components {
+  /* Consistent section spacing */
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8 py-12 sm:py-16;
+  }
+
+  /* Standard section title and subtitle, responsive sizes */
+  .section-title {
+    @apply text-2xl sm:text-3xl md:text-4xl font-display font-bold;
+  }
+
+  .section-subtitle {
+    @apply max-w-3xl mx-auto text-muted-foreground text-base sm:text-lg;
+  }
+
+  /* Make images fluid by default to avoid overflow on small screens */
+  img {
+    max-width: 100%;
+    height: auto;
+    display: block;
   }
 }
