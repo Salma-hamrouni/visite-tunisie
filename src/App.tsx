@@ -15,6 +15,7 @@ import GalleryPage from "./pages/GalleryPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import MapPage from "./pages/MapPage.tsx";
+import FloatingChatButton from "./components/FloatingChatButton";
 const queryClient = new QueryClient();
 
 
@@ -43,6 +44,7 @@ const App = () => (
             <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <FloatingChatButton />
         </BrowserRouter>
       </LanguageProvider>
     </TooltipProvider>

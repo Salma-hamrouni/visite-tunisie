@@ -1,7 +1,7 @@
 import { useLanguage } from "../contexts/LanguageContext";
 import { Mail, MapPin, Phone } from "lucide-react";
 import { useState } from "react";
-import TunisiaChatbot from "./TunisiaChatbot";
+
 
 const ContactSection = () => {
   const { t, lang } = useLanguage();
@@ -19,21 +19,6 @@ const ContactSection = () => {
         <div className="text-center mb-16">
           <h2 className="section-title">{t("contact.title")}</h2>
           <p className="section-subtitle mx-auto mt-4">{t("contact.subtitle")}</p>
-        </div>
-
-        {/* Chatbot Section */}
-        <div className="mb-16">
-          <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-foreground">
-              {lang === "ar" ? "🤖 اسأل مساعدنا الذكي" : lang === "fr" ? "🤖 Demandez à notre assistant IA" : "🤖 Ask our AI Assistant"}
-            </h3>
-            <p className="text-muted-foreground mt-2 text-sm">
-              {lang === "ar" ? "احصل على إجابات فورية عن تونس" : lang === "fr" ? "Obtenez des réponses instantanées sur la Tunisie" : "Get instant answers about Tunisia"}
-            </p>
-          </div>
-          <div className="max-w-2xl mx-auto">
-            <TunisiaChatbot />
-          </div>
         </div>
 
   <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
