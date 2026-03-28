@@ -148,7 +148,7 @@ const TunisiaChatbot = () => {
         {messages.length === 0 && (
           <div className="flex flex-col items-center justify-center h-full text-muted-foreground text-sm text-center gap-2">
             <Bot className="w-10 h-10 opacity-30" />
-            <p>{lang === "ar" ? "مرحباً! اسألني عن تونس 🇹🇳" : lang === "fr" ? "Bonjour ! Posez-moi une question sur la Tunisie 🇹🇳" : "Hello! Ask me about Tunisia 🇹🇳"}</p>
+            <p>{lang === "ar" ? "مرحباً! اسألني عن تونس " : lang === "fr" ? "Bonjour ! Posez-moi une question sur la Tunisie " : "Hello! Ask me about Tunisia "}</p>
           </div>
         )}
         {messages.map((msg, i) => (

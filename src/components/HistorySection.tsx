@@ -34,7 +34,7 @@ const timeline: {
     extra: {
       fr: "Sous Rome, la Tunisie (Africa Proconsularis) devint le 'grenier à blé de Rome'. Le pays se couvrit de villes prospères, de routes, d'aqueducs et de monuments spectaculaires. Les mosaïques romaines trouvées en Tunisie, conservées au Musée du Bardo, constituent la plus grande collection au monde.",
       ar: "تحت حكم روما أصبحت تونس (أفريقيا البروقنصلية) 'سلة خبز روما'. غُطيت البلاد بمدن مزدهرة وطرق وقنوات مائية ومعالم مذهلة. فسيفساء رومانية وُجدت في تونس ومحفوظة بمتحف باردو تُشكل أكبر مجموعة في العالم.",
-      en: "Under Rome, Tunisia (Africa Proconsularis) became the 'breadbasket of Rome'. The country was covered with prosperous cities, roads, aqueducts, and spectacular monuments. Roman mosaics found in Tunisia, preserved at the Bardo Museum, constitute the world's largest collection.",
+      en: "Under Rome, Tunisia (Africa Proconsularis) became the 'breadbasket of Rome'. The country was covered with prosperous cities, roads, aqueducs, and spectacular monuments. Roman mosaics found in Tunisia, preserved at the Bardo Museum, constitute the world's largest collection.",
     },
   },
   {
@@ -128,7 +128,7 @@ const HistorySection = () => {
               <div key={item.titleKey} className={`relative flex flex-col md:flex-row items-start gap-8 ${i % 2 === 1 ? "md:flex-row-reverse" : ""}`}>
                 <div className="absolute left-4 md:left-1/2 -translate-x-1/2 w-5 h-5 rounded-full bg-primary border-4 border-background z-10 shadow-md shadow-primary/20" />
 
-                  <div className={`md:w-1/2 pl-10 md:pl-0 ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
+                <div className={`md:w-1/2 pl-10 md:pl-0 ${i % 2 === 0 ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
                   <span className="inline-block text-sm font-bold text-primary bg-primary/10 px-3 py-1 rounded-full mb-2">{item.year}</span>
                   <h3 className="text-xl md:text-2xl font-display font-bold text-foreground mt-1">{t(item.titleKey)}</h3>
                   <p className="text-muted-foreground mt-3 leading-relaxed">{t(item.textKey)}</p>
@@ -137,13 +137,18 @@ const HistorySection = () => {
                   )}
                 </div>
 
-                  <div className="md:w-1/2 pl-0 md:pl-12">
-                    {item.img && (
-                      <div className="mx-auto w-full max-w-md md:max-w-full rounded-xl overflow-hidden shadow-lg card-hover mt-4 md:mt-0">
-                        <img src={item.img} alt={t(item.titleKey)} className="w-full h-48 md:h-64 object-cover" loading="lazy" />
-                      </div>
-                    )}
-                  </div>
+                <div className="md:w-1/2 pl-10 md:pl-12">
+                      {item.img && (
+                        <div className="w-full h-48 md:h-64 rounded-xl overflow-hidden shadow-lg card-hover">
+                          <img 
+                            src={item.img!} 
+                            alt={t(item.titleKey)} 
+                            className="w-full h-full object-cover" 
+                            loading="lazy" 
+                          />
+                        </div>
+                      )}
+                </div>
               </div>
             ))}
           </div>

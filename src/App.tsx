@@ -14,8 +14,9 @@ import PlacesPage from "./pages/PlacesPage.tsx";
 import GalleryPage from "./pages/GalleryPage.tsx";
 import ContactPage from "./pages/ContactPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
-
+import MapPage from "./pages/MapPage.tsx";
 const queryClient = new QueryClient();
+
 
 const ScrollToTop = () => {
   const { pathname } = useLocation();
@@ -38,6 +39,7 @@ const App = () => (
             <Route path="/food" element={<FoodPage />} />
             <Route path="/places" element={<PlacesPage />} />
             <Route path="/gallery" element={<GalleryPage />} />
+            <Route path="/map" element={<MapPage />} />
             <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

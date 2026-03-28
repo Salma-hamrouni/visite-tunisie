@@ -30,17 +30,11 @@ const IntroSection = () => {
           </div>
         </div>
 
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6">
-          {highlights.map((h) => (
-            <div key={h.key} className="text-center p-6 rounded-2xl bg-card shadow-sm card-hover border border-border/50">
-              <h.icon className={`w-10 h-10 mx-auto mb-4 ${h.color}`} />
-              <h3 className="font-display font-semibold text-foreground">{t(h.key)}</h3>
-            </div>
-          ))}
-        </div>
+  
       </div>
     </section>
   );
 };
 
 export default IntroSection;
+

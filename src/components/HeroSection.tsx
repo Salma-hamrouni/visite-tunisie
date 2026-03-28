@@ -24,18 +24,14 @@ const HeroSection = () => {
         <p className="mt-4 text-base sm:text-lg md:text-xl text-primary-foreground/90 animate-fade-up-delay-1 max-w-2xl mx-auto leading-relaxed">
           {t("hero.subtitle")}
         </p>
-        <a
-          href="#history"
-          className="inline-block mt-10 px-8 py-4 bg-primary text-primary-foreground font-semibold rounded-full text-lg hover:bg-primary/90 transition-all duration-300 hover:shadow-2xl hover:shadow-primary/30 hover:-translate-y-1 animate-fade-up-delay-2"
-        >
-          {t("hero.cta")}
-        </a>
       </div>
 
       <a href="#intro" className="absolute bottom-8 left-1/2 -translate-x-1/2 text-primary-foreground/80 animate-bounce">
         <ChevronDown className="w-8 h-8" />
       </a>
+      
     </section>
+      
   );
 };
 

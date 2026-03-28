@@ -17,6 +17,7 @@ const translations: Record<string, Record<Lang, string>> = {
   "nav.food": { fr: "Gastronomie", ar: "المطبخ", en: "Food" },
   "nav.places": { fr: "Destinations", ar: "الوجهات", en: "Places" },
   "nav.gallery": { fr: "Galerie", ar: "معرض الصور", en: "Gallery" },
+  "nav.map": { fr: "Carte", ar: "الخريطة", en: "Map" },
   "nav.contact": { fr: "Contact", ar: "اتصل بنا", en: "Contact" },
   "hero.title": { fr: "Découvrez la Tunisie", ar: "اكتشف تونس", en: "Discover Tunisia" },
   "hero.subtitle": {

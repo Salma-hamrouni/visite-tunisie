@@ -11,6 +11,7 @@ const navItems = [
   { key: "nav.food", href: "/food" },
   { key: "nav.places", href: "/places" },
   { key: "nav.gallery", href: "/gallery" },
+  { key: "nav.map", href: "/map" },
   { key: "nav.contact", href: "/contact" },
 ];
 

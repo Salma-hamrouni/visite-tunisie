@@ -8,46 +8,109 @@
   :root {
     --background: 40 33% 98%;
     --foreground: 220 20% 15%;
-    --border: 210 20% 90%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 20% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 20% 15%;
+
     --primary: 210 100% 56%;
     --primary-foreground: 0 0% 100%;
-  }
 
-  /* Box sizing reset to make spacing predictable */
-  *, *::before, *::after {
-    box-sizing: border-box;
-  }
+    --secondary: 36 40% 92%;
+    --secondary-foreground: 30 30% 25%;
 
+    --muted: 210 20% 96%;
+    --muted-foreground: 220 10% 50%;
+
+    --accent: 30 60% 55%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 210 100% 56%;
+
+    --radius: 0.75rem;
+
+    --sand: 36 50% 88%;
+    --sand-dark: 30 35% 40%;
+    --mediterranean: 200 80% 50%;
+    --terracotta: 15 60% 55%;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
   body {
     @apply bg-background text-foreground font-sans;
-    /* Prevent accidental horizontal scroll due to small negative offsets */
-    overflow-x: hidden;
   }
-
   h1, h2, h3, h4 {
     @apply font-display;
   }
 }
 
 @layer components {
-  /* Consistent section spacing */
   .section-padding {
-    @apply px-4 sm:px-6 lg:px-8 py-12 sm:py-16;
+    @apply px-4 sm:px-6 lg:px-8 py-16 md:py-24;
   }
-
-  /* Standard section title and subtitle, responsive sizes */
   .section-title {
-    @apply text-2xl sm:text-3xl md:text-4xl font-display font-bold;
+    @apply text-3xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4;
   }
-
   .section-subtitle {
-    @apply max-w-3xl mx-auto text-muted-foreground text-base sm:text-lg;
+    @apply text-lg md:text-xl text-muted-foreground max-w-2xl;
   }
+  .card-hover {
+    @apply transition-all duration-500 hover:shadow-xl hover:-translate-y-2;
+  }
+  .overlay-gradient {
+    @apply absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent;
+  }
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border border-white/20;
+  }
+}
 
-  /* Make images fluid by default to avoid overflow on small screens */
-  img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.8s ease-out forwards;
+    opacity: 0;
   }
+  .animate-fade-up-delay-1 {
+    animation: fadeUp 0.8s ease-out 0.2s forwards;
+    opacity: 0;
+  }
+  .animate-fade-up-delay-2 {
+    animation: fadeUp 0.8s ease-out 0.4s forwards;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
 }

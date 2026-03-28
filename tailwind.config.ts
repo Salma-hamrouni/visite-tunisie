@@ -3,6 +3,10 @@ import type { Config } from "tailwindcss";
 export default {
   darkMode: 'class',
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  safelist: [
+    "text-terracotta",
+    "text-mediterranean",
+  ],
   theme: {
     extend: {
       fontFamily: {
