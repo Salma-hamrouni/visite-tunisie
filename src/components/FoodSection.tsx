@@ -39,7 +39,7 @@ const dishes: {
   {
     img: lablabiImg,
     name: { fr: "Lablabi", ar: "لبلابي", en: "Lablabi" },
-    category: { fr: "Petit-déjeuner", ar: "فطور", en: "Breakfast" },
+    category: { fr: "Plat principal", ar: "طبق رئيسي", en: "Main dish" },
     desc: {
       fr: "Le petit-déjeuner populaire des Tunisiens, surtout en hiver. Une soupe de pois chiches épicée servie sur du pain rassis, assaisonnée de harissa, cumin, huile d'olive et ail. Un plat réconfortant et nourrissant qui coûte presque rien.",
       ar: "فطور الشعب التونسي، خاصة في الشتاء. حساء حمص متبل يُقدم على خبز يابس مع الهريسة والكمون وزيت الزيتون والثوم. طبق مريح ومغذي بتكلفة زهيدة.",
