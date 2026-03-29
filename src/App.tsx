@@ -16,6 +16,7 @@ import ContactPage from "./pages/ContactPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 import MapPage from "./pages/MapPage.tsx";
 import FloatingChatButton from "./components/FloatingChatButton";
+import ScrollSyncAudio from "./components/ScrollSyncAudio";
 const queryClient = new QueryClient();
 
 
@@ -45,6 +46,7 @@ const App = () => (
             <Route path="*" element={<NotFound />} />
           </Routes>
           <FloatingChatButton />
+          <ScrollSyncAudio />
         </BrowserRouter>
       </LanguageProvider>
     </TooltipProvider>

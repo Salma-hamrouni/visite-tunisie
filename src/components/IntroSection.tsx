@@ -5,12 +5,7 @@ import sidiImg from "../assets/sidi-bou-said.jpg";
 const IntroSection = () => {
   const { t } = useLanguage();
 
-  const highlights = [
-    { icon: Landmark, key: "highlights.history", color: "text-primary" },
-    { icon: UtensilsCrossed, key: "highlights.food", color: "text-terracotta" },
-    { icon: Heart, key: "highlights.traditions", color: "text-accent" },
-    { icon: Mountain, key: "highlights.tourism", color: "text-mediterranean" },
-  ];
+
 
   return (
     <section id="intro" className="section-padding bg-background">

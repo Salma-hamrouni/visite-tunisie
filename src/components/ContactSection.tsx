@@ -4,7 +4,7 @@ import { useState } from "react";
 
 
 const ContactSection = () => {
-  const { t, lang } = useLanguage();
+  const { t } = useLanguage();
   const [submitted, setSubmitted] = useState(false);
 
   const handleSubmit = (e: React.FormEvent) => {
