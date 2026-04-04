@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useLanguage } from "../contexts/LanguageContext";
 import { Menu, X, Globe } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import ThemeToggle from "./ThemeToggle";
 import tunisiaFlag from "../assets/Flag_of_Tunisia.svg";
 
 const navItems = [
@@ -10,8 +11,8 @@ const navItems = [
   { key: "nav.culture", href: "/culture" },
   { key: "nav.food", href: "/food" },
   { key: "nav.places", href: "/places" },
-  { key: "nav.gallery", href: "/gallery" },
   { key: "nav.map", href: "/map" },
+  { key: "nav.gallery", href: "/gallery" },
   { key: "nav.contact", href: "/contact" },
 ];
 
@@ -44,11 +45,10 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className={`flex items-center gap-3 font-display text-xl md:text-2xl font-bold transition-colors ${showSolid ? "text-primary" : "text-primary-foreground"}`} aria-label="Home">
-<img src={tunisiaFlag} alt="Tunisia logo" className="h-8 w-8 md:h-10 md:w-10 object-contain" />
-            <span className="hidden sm:inline">Tunisia</span>
-          </Link>
-
+          <Link to="/" className={`flex items-center gap-2 font-display text-xl md:text-2xl font-bold transition-colors ${showSolid ? "text-primary" : "text-primary-foreground"}`}>
+              <img src={tunisiaFlag} alt="Tunisia flag" className="h-8 w-8 md:h-10 md:w-10 object-contain"/>
+              <span>Tunisia</span>
+            </Link>
           <div className="hidden md:flex items-center gap-1">
             {navItems.map((item) => (
               <Link
@@ -65,7 +65,8 @@ const Navbar = () => {
                 {t(item.key)}
               </Link>
             ))}
-            <div className={`flex items-center gap-1 ml-4 px-2 py-1 rounded-full border ${showSolid ? "border-border" : "border-white/20"}`}>
+            <ThemeToggle className={showSolid ? "text-foreground" : "text-primary-foreground"} />
+            <div className={`flex items-center gap-1 px-2 py-1 rounded-full border ${showSolid ? "border-border" : "border-white/20"}`}>
               <Globe className="w-4 h-4" />
               {langOptions.map((l) => (
                 <button
@@ -112,6 +113,7 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="flex items-center gap-2 px-4 pt-4">
+              <ThemeToggle />
               {langOptions.map((l) => (
                 <button
                   key={l.code}

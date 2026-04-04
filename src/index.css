@@ -50,6 +50,49 @@
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+.dark {
+    --background: 220 20% 10%;
+    --foreground: 40 20% 80%;
+
+    --card: 220 18% 14%;
+    --card-foreground: 40 20% 90%;
+
+    --popover: 220 18% 14%;
+    --popover-foreground: 40 20% 90%;
+
+    --primary: 210 100% 60%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 15% 20%;
+    --secondary-foreground: 40 20% 85%;
+
+    --muted: 220 15% 18%;
+    --muted-foreground: 220 10% 60%;
+
+    --accent: 30 60% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
+    --ring: 210 100% 60%;
+
+    --sand: 36 30% 25%;
+    --sand-dark: 30 35% 55%;
+    --mediterranean: 200 80% 55%;
+    --terracotta: 15 60% 50%;
+
+    --sidebar-background: 220 18% 12%;
+    --sidebar-foreground: 40 20% 85%;
+    --sidebar-primary: 210 100% 60%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 15% 18%;
+    --sidebar-accent-foreground: 40 20% 85%;
+    --sidebar-border: 220 15% 22%;
+    --sidebar-ring: 210 100% 60%;
+  }
 }
 
 @layer base {
@@ -74,15 +117,14 @@
   .section-subtitle {
     @apply text-lg md:text-xl text-muted-foreground max-w-2xl;
   }
-  .card-hover {
-    @apply transition-all duration-500 hover:shadow-xl hover:-translate-y-2;
-  }
+
   .overlay-gradient {
     @apply absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent;
   }
   .glass {
     @apply bg-white/10 backdrop-blur-md border border-white/20;
   }
+
 }
 
 @layer utilities {
